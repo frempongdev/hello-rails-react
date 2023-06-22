@@ -5,17 +5,20 @@ import "./controllers"
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Greetings from "./greetings";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
       < Greetings />
     </>
   );
 }
 
 ReactDOM.render(
-  <App/>,
+    <Provider store={store}>
+        <App/>
+    </Provider>,
   document.getElementById('root'),
 );
