@@ -1,5 +1,5 @@
 class GreetingsController < ApplicationController
   def index
-    render json: Greeting.random_phrase
+    render json: { phrase: Greeting.random_phrase }
   end
 end
